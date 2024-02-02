@@ -68,7 +68,7 @@ export const RatingStars = styled.div`
   display: flex;
   svg{
     font-size: 1.2rem;
-
+    color: goldenrod;
   }
 `
 
@@ -96,13 +96,17 @@ export const AddToCardButtonWrapper = styled.div`
   width: 100%;
   margin-top: 1rem;
 
-  :hover{
+  
+  &
+   :hover{
     transform: scale(1.02);
+    position:  static;
    }
    :active{
     transform: scale(1);
-    background-color: #411;
    }
+  
+  
 `;
 
 
@@ -121,10 +125,31 @@ export const AddToCardButton = styled.button`
   color: white;
   font-size: 0.8rem;
 
+    svg{
+      font-size: 1.2rem;
+   }
+
+  
+
+`;
+
+export const RemoveFromCardButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  background-color: #411;
+  color: white;
+  font-size: 0.8rem;
 
     svg{
       font-size: 1.2rem;
    }
 
-
-`;
+`
