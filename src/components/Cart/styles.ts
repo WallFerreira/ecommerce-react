@@ -31,13 +31,84 @@ export const CartProductsList = styled.ul`
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 `
 
-export const CartProductItem = styled.li``
+export const CartProductItem = styled.li`
+ background-color: #efefef;
+ padding: 0.4rem;
+ border-radius: 5px;
+  
+`
 
-export const CartTotal = styled.strong`
-background-color: gray;
-width: 100vw;
+export const CartTotal = styled.div`
+
+background-color: aliceblue;
+border-radius: 5px;
+padding: 0.8rem;
+width: 100%;
+font-weight: 600;
+`
+
+export const ButtonRemoveProduct = styled.button`
+
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 20px;
+  background-color: #991629;
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 500;
+`
+
+
+export const WrapperHeaderCart = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+`
+export const CartProductTitle = styled.strong`
+`
+
+export const CartButtonClose = styled.button`
+ border: none;
+ background-color: white;
+    svg{
+      font-size: 2.2rem;
+   }
+  
+`
+
+
+export const CartButtonCheckout = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  background-color: #411;
+  color: white;
+  font-size: 1rem;
+
+  :hover{
+    transform: scale(1.02);
+    position:  static;
+   }
+   :active{
+    transform: scale(1);
+   }
+
+    svg{
+      font-size: 1.3rem;
+   }
+
 
 `

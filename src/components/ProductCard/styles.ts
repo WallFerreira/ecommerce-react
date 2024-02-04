@@ -105,8 +105,6 @@ export const AddToCardButtonWrapper = styled.div`
    :active{
     transform: scale(1);
    }
-  
-  
 `;
 
 

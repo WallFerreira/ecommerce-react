@@ -25,7 +25,7 @@ export const HeaderTitle = styled.h1`
 export const ButtonsWrapper = styled.div`
   display: flex;
   gap: 1rem;
-
+  margin-right: 2rem;
 
   :hover{
 
@@ -48,7 +48,7 @@ export const AuthButton = styled.button<AuthButtonProp>`
   border-radius: 5px;
   height: 30px;
   padding: 0 1rem;
-  background-color: ${(props) => props.isLogged ? '#399959' : '#669663'};
+  background-color: ${(props) => props.isLogged ? '#399959' : '#666663'};
   color: white;
   font-size: 0.78rem;
   font-weight: 500;
@@ -77,3 +77,4 @@ export const CartButton = styled.button`
       font-size: 0.8rem;
    }
 `;
+
