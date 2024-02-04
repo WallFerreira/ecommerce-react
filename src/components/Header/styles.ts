@@ -2,6 +2,11 @@ import styled from "styled-components"
 
 export const StyledHeader = styled.header`
   background-color: #111;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Garante que o header esteja acima de outros elementos */
+  
 `;
 
 export const Wrapper = styled.div`
@@ -19,6 +24,11 @@ export const Wrapper = styled.div`
 export const HeaderTitle = styled.h1`
   color: white;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.05rem;
+    margin-right: 2rem; /* Ajuste o tamanho desejado para dispositivos móveis */
+  }
 
 `;
 

@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import * as S from './styles'
+import * as S from './styles';
 import { RootReducer } from '../../redux/root-reducer';
 import { removeProduct } from '../../redux/Cart/cart-slice';
-import { FaArrowRight } from "react-icons/fa6";
-import { MdPayment } from "react-icons/md";
-
+import { FaArrowRight } from 'react-icons/fa6';
+import { MdPayment } from 'react-icons/md';
+import { FiShoppingCart } from 'react-icons/fi';
 
 interface CartProps {
   showCart: boolean;
@@ -12,12 +12,12 @@ interface CartProps {
 }
 
 export const Cart: React.FC<CartProps> = ({ showCart, onClose }) => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const { cart } = useSelector((rootReducer: RootReducer) => rootReducer.cartReducer);
 
   const total = cart.reduce((totalCart, product) => {
-    return totalCart + product.price
-  }, 0)
+    return totalCart + product.price;
+  }, 0);
 
   return (
     <S.Container showCart={showCart}>
@@ -25,7 +25,7 @@ export const Cart: React.FC<CartProps> = ({ showCart, onClose }) => {
         <S.CartButtonClose onClick={onClose}>
           <FaArrowRight />
         </S.CartButtonClose>
-        <S.Title>Carrinho</S.Title>
+        <S.Title>Meu carrinho <FiShoppingCart /></S.Title>
       </S.WrapperHeaderCart>
 
       <S.CartProductsList>
@@ -42,10 +42,11 @@ export const Cart: React.FC<CartProps> = ({ showCart, onClose }) => {
       </S.CartProductsList>
 
       <S.CartTotal>
-        Total: ${total}
+        Total: ${total.toFixed(2)}
       </S.CartTotal>
-      <S.CartButtonCheckout>Checkout <MdPayment />
-      </S.CartButtonCheckout>
+      <S.WrapperCartButtonCheckout>
+        <S.CartButtonCheckout>Checkout <MdPayment /></S.CartButtonCheckout>
+      </S.WrapperCartButtonCheckout>
     </S.Container>
-  )
-}
+  );
+};

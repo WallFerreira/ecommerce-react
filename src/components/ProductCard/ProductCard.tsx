@@ -46,6 +46,7 @@ export const ProductCard: React.FC<ProductCardsProp> = ({ product }) => {
             <S.Price> ${product.price} </S.Price>
           </S.ReviewPriceContainer>
           <S.AddToCardButtonWrapper>
+
             {isProductOnCart ?
               <S.RemoveFromCardButton onClick={handleRemoveProductFromCart}>
                 Remover do carrinho
@@ -54,6 +55,7 @@ export const ProductCard: React.FC<ProductCardsProp> = ({ product }) => {
               <S.AddToCardButton onClick={handleAddProductToCart}>
                 Adicionar ao carrinho <FiShoppingCart />
               </S.AddToCardButton>}
+
           </S.AddToCardButtonWrapper>
         </S.WrapRatingButton>
       </S.Card>
