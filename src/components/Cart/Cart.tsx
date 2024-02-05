@@ -1,19 +1,20 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as S from './styles';
-import { RootReducer } from '../../redux/root-reducer';
 import { removeProduct } from '../../redux/Cart/cart-slice';
 import { FaArrowRight } from 'react-icons/fa6';
 import { MdPayment } from 'react-icons/md';
 import { FiShoppingCart } from 'react-icons/fi';
+import { Product } from '../../data/product';
 
 interface CartProps {
   showCart: boolean;
   onClose: () => void; // Adicione a propriedade onClose ao componente
+  cart: Product[]
 }
 
-export const Cart: React.FC<CartProps> = ({ showCart, onClose }) => {
+export const Cart: React.FC<CartProps> = ({ showCart, onClose, cart }) => {
   const dispatch = useDispatch();
-  const { cart } = useSelector((rootReducer: RootReducer) => rootReducer.cartReducer);
+
 
   const total = cart.reduce((totalCart, product) => {
     return totalCart + product.price;
@@ -36,16 +37,17 @@ export const Cart: React.FC<CartProps> = ({ showCart, onClose }) => {
             </S.ButtonRemoveProduct>
             <S.CartProductTitle>
               {product.title}
-            </S.CartProductTitle> - ${product.price}
+            </S.CartProductTitle>
+            ${product.price}
           </S.CartProductItem>
         ))}
       </S.CartProductsList>
 
-      <S.CartTotal>
+      <S.CartTotal data-testid='total' >
         Total: ${total.toFixed(2)}
       </S.CartTotal>
       <S.WrapperCartButtonCheckout>
-        <S.CartButtonCheckout>Checkout <MdPayment /></S.CartButtonCheckout>
+        <S.CartButtonCheckout>Checkout<MdPayment /></S.CartButtonCheckout>
       </S.WrapperCartButtonCheckout>
     </S.Container>
   );

@@ -1,9 +1,10 @@
-import "@testing-library/jest-dom"
+
 import { render, screen } from "@testing-library/react"
 import { Counter } from "./Counter"
 import userEvent from "@testing-library/user-event"
 
 describe('Counter > Unit Tests', () => {
+
   it('should render Counter component correctly', () => {
 
     render(<Counter />)
@@ -16,7 +17,6 @@ describe('Counter > Unit Tests', () => {
     expect(counterValueElement).toHaveTextContent("0");
     expect(increaseButtonElement).toBeInTheDocument();
     expect(decreaseButtonElement).toBeInTheDocument();
-
 
   })
 
@@ -33,7 +33,6 @@ describe('Counter > Unit Tests', () => {
 
     expect(counterValueElement).toHaveTextContent("1")
 
-
   })
 
   it('should decrease counter value when decrease button is clicked', () => {
@@ -48,15 +47,7 @@ describe('Counter > Unit Tests', () => {
     userEvent.click(decreaseButton)
 
     expect(counterValueElement).toHaveTextContent("-1")
-
-
   })
-
-
-
-
-
-
 
 })
 
