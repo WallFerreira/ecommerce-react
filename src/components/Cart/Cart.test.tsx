@@ -15,7 +15,7 @@ jest.mock('react-redux', () => {
       return mockDispactch
     }
   }
-})
+});
 
 
 describe('Cart > Unit Tests', () => {
