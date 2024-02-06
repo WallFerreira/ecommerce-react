@@ -4,17 +4,17 @@ interface ContainerProps {
   showCart: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
-  position: sticky;
+export const Container = styled.aside<ContainerProps>`
+  position: fixed;
   top: 0;
   right: ${(props) => (props.showCart ? "0" : "-340px")};
   width: 340px;
-  max-height: 100vh;
+  height: 100vh;
   background-color: white;
   padding: 2rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   transition: right 0.6s;
-  overflow-y: auto; 
+  overflow-y: auto;
 `;
 
 export const Title = styled.h1``;
