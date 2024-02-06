@@ -37,8 +37,7 @@ export const Cart: React.FC<CartProps> = ({ showCart, onClose, cart }) => {
             </S.ButtonRemoveProduct>
             <S.CartProductTitle>
               {product.title}
-            </S.CartProductTitle>
-            ${product.price}
+            </S.CartProductTitle> <strong>Price: </strong> ${product.price}
           </S.CartProductItem>
         ))}
       </S.CartProductsList>

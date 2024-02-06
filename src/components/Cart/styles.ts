@@ -17,7 +17,9 @@ export const Container = styled.aside<ContainerProps>`
   overflow-y: auto;
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1` 
+  margin-right: 1rem;
+`;
 
 export const CartProductsList = styled.ul`
   padding: 2rem 0;
@@ -28,7 +30,7 @@ export const CartProductsList = styled.ul`
 `;
 
 export const CartProductItem = styled.li`
-  background-color: #efefef;
+  background-color: #F7F7F7;
   padding: 0.4rem;
   border-radius: 5px;
 `;
