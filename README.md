@@ -1,3 +1,14 @@
+# Projeto desenvolvido em React e typescript.
+
+Esse projeto simula uma página de produtos de um Ecommerce.
+
+Tem interação com estado do login, produtos e carrinho de compras
+
+![image](https://github.com/WallFerreira/ecommerce-react/assets/47425983/c10cb137-42c0-417f-9b03-0d9bf702f6ab)
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
