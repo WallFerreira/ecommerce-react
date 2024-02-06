@@ -1,4 +1,4 @@
-# Projeto desenvolvido em React, typescript.
+# Projeto desenvolvido em React e typescript.
 
 Esse projeto simula uma página de produtos de um Ecommerce.
 
